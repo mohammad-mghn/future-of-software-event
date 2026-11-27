@@ -1,12 +1,11 @@
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
 const slides=$$('.slide'),stage=$('.stage'),bar=$('#bar');let cur=0,step=0,t0=null,read=false;const FINAL=location.search.includes('final'); // ?final = همه‌چیز آشکار
-const frags=s=>$$('.f',s),hasSrc=s=>!!$('.foot .srcs',s),steps=s=>frags(s).length+(hasSrc(s)?1:0);
+const frags=s=>$$('.f',s),steps=s=>frags(s).length; // sources are always visible: no extra click
 const acts=[...new Set(slides.map(s=>s.dataset.act))];
 acts.forEach(a=>{const b=document.createElement('button');b.setAttribute('aria-label','بخش '+a);b.innerHTML='<i></i>';b.onclick=()=>go(slides.findIndex(s=>s.dataset.act===a));bar.append(b)});
 function fit(){if(read)return;const k=Math.min(innerWidth/1280,innerHeight/720);stage.style.transform=`scale(${k}) translate(-50%,-50%)`}
 function paint(){const s=slides[cur];if(FINAL)step=steps(s);slides.forEach((x,i)=>x.classList.toggle('on',i===cur));frags(s).forEach((f,i)=>f.classList.toggle('show',i<step));
- const f=$('.foot',s);if(f)f.classList.toggle('open',hasSrc(s)&&step>=steps(s));
  $$('#bar i').forEach((x,k)=>{const g=slides.map((q,i)=>[q,i]).filter(([q])=>q.dataset.act===acts[k]).map(([,i])=>i);const d=g.filter(i=>i<=cur).length/g.length;x.style.width=d*100+'%'});
  panel();try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
 function go(i,st=0){cur=Math.max(0,Math.min(slides.length-1,i));step=st;if(read)slides[cur].scrollIntoView();else paint()}

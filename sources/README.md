@@ -15,6 +15,10 @@
 | [07-roles-market.md](07-roles-market.md) | FDE، نقش‌های جدید، استخدام Anthropic و OpenAI |
 | [08-future.md](08-future.md) | Code Review، Black Box، Agent، AGI، Computer Science |
 | [09-learning-path.md](09-learning-path.md) | ریاضی، سیستم، Frontend، مسیر یادگیری |
+| [10-v3-people.md](10-v3-people.md) | نسخه‌ی ۳: آدم‌های بزرگ، جمله‌ی خودشون، و این‌که داده چی می‌گه |
+| [11-v3-market.md](11-v3-market.md) | نسخه‌ی ۳: Juniorها، سیگنال استخدام، نقش‌ها، حقوق |
+| [12-v3-iran-learning.md](12-v3-iran-learning.md) | نسخه‌ی ۳: ایران، ریاضی، مدرک، یادگیری با AI |
+| [13-v4-why.md](13-v4-why.md) | نسخه‌ی ۴: شاهدهای «چرا»: گلوگاه، صفحه‌گسترده، آب رفتن مهارت، اثر تولید |
 
 ## «چقدر مطمئنیم»
 
